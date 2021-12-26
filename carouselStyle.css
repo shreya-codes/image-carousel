@@ -5,11 +5,20 @@
     
 }
 .carousel-container{
-    margin: 40px;
+    
     width: 500px;
      overflow: hidden; 
+     position: absolute;
+    top:30%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
 
-
+}
+body{
+    background-color: hsl(210, 36%, 96%);
 }
 
 .carousel-image-wrapper{
@@ -18,7 +27,40 @@
     position: relative;
    
     /* transition: 500ms; */
+
 }
+#prev, #next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin: 0;
+    padding: 16px;
+    color: hsl(209, 61%, 16%);
+    font-weight:900;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+
+    
+  }
+  #next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    margin-right: 300px;
+  }
+  #prev{
+      margin-left: 300px;
+  }
+
+  
+  #prev:hover, #next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+  
+
 img{
     position: absolute;
     width: 500px;
@@ -26,3 +68,29 @@ img{
     border: 1px solid #ccc;
     top: 0px;
 }
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+   padding: 5px;
+   margin: 5px;
+    background-color: hsl(205, 63%, 48%);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    
+  }
+  #dots{
+    padding: 1em;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+  }
+  
+  
+  .active, .dot:hover {
+    background-color:white ;
+    border: 5px solid hsl(205, 63%, 48%);
+  }
