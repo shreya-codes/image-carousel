@@ -48,6 +48,9 @@ for(var i=0;i<imageCount;i++){
 var slideWrap=document.getElementsByClassName('sliderContainer')[0];
 slideWrap.append(dots)
 
+
+
+
 let currentIndex=0;
 let interval;
 let slide=0;
@@ -56,7 +59,9 @@ let marginPx=0
 nextBtn.onclick= function(){next()}
 prevBtn.onclick= function(){ previous()}
 
-
+var autoChange= setInterval(()=>{
+    next()
+},1000)
 
 
 function next(){
