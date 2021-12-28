@@ -30,30 +30,33 @@ body{
 
 }
 #prev, #next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin: 0;
-    padding: 16px;
-    color: hsl(209, 61%, 16%);
-    font-weight:900;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-
-    
-  }
-  #next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-    margin-right: 300px;
-  }
-  #prev{
-      margin-left: 300px;
+ width: 50px;
+  margin: 0 auto;
+  display: inline-block;
+  top: 50%;
+  padding: 10px;
+  
+  
   }
 
+.btnWrapper{
+  width: 110px;
+margin: 0 auto;
+display: inline-block;
+position: absolute;
+top: 85%;
+margin-left: auto;
+margin-right: auto;
+left: 45%;
+}
+      
+.btnContainer{
+
+  position: relative;
+  width: 110px;
+  height: 50px;
+  margin: 0 auto;
+}
   
   #prev:hover, #next:hover {
     background-color: rgba(0,0,0,0.8);

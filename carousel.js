@@ -1,6 +1,6 @@
 const container= document.getElementsByClassName('carousel-container')
 const images= document.getElementById('images')
-const dots=document.getElementById('dots');
+
 
 const imageWidth=500;
 const imageCount=images.children.length;
@@ -13,8 +13,41 @@ for (let i =0;i < imageCount;i++){
     image.style.left=`${i*imageWidth}px`
 }
 
-const nextBtn=document.getElementById('next');
-const prevBtn= document.getElementById('prev')
+//creating the buttons
+var prevBtn= document.createElement('button')
+prevBtn.setAttribute('id','prev')
+prevBtn.setAttribute('class','left-arrow')
+prevBtn.innerHTML='&#10094;'
+
+var nextBtn= document.createElement('button')
+nextBtn.setAttribute('id','next')
+nextBtn.setAttribute('class','right-arrow')
+nextBtn.innerHTML="&#10095;"
+
+var btnWrapper=document.createElement('div')
+btnWrapper.setAttribute('class','btnWrapper')
+
+var btnContainer= document.createElement('div')
+btnContainer.setAttribute('class',"btnContainer")
+var slideWrap=document.getElementsByClassName('sliderContainer')[0];
+slideWrap.append(btnWrapper)
+btnWrapper.append(btnContainer)
+btnContainer.append(prevBtn);
+btnContainer.append(nextBtn)
+
+//creating the dots
+
+var dots=document.createElement('div')
+dots.setAttribute('id','dots')
+for(var i=0;i<imageCount;i++){
+    var dot=document.createElement('span')
+    dot.setAttribute('class','dot')
+    dot.setAttribute('id','dot')
+    dots.appendChild(dot);   
+}
+var slideWrap=document.getElementsByClassName('sliderContainer')[0];
+slideWrap.append(dots)
+
 let currentIndex=0;
 let interval;
 let slide=0;
@@ -22,6 +55,9 @@ let marginPx=0
 
 nextBtn.onclick= function(){next()}
 prevBtn.onclick= function(){ previous()}
+
+
+
 
 function next(){
     
@@ -116,5 +152,3 @@ for (let i = 0, len = dots.children.length; i < len; i++)
       
     }
 }
-
-
