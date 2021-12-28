@@ -68,7 +68,7 @@ img{
     border: 1px solid #ccc;
     top: 0px;
 }
-.dot {
+#dot,.active {
     cursor: pointer;
     height: 15px;
     width: 15px;
